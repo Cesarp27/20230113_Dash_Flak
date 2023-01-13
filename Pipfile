@@ -13,6 +13,11 @@ flask-bootstrap = "~=3.3.7.0"
 dash = "*"
 pandas = "*"
 dash-bootstrap-components = "*"
+flask-sqlalchemy = "*"
+flask-migrate = "*"
+flask-restful = "*"
+psycopg2-binary = "*"
+passlib = "*"
 
 [dev-packages]
 

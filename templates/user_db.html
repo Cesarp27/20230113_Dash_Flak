@@ -19,41 +19,27 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li><a href="/user">User</a></li>
-                <li><a href="/paris_2">Paris</a></li>
+                <li><a href="/dash">Navbar</a></li>
+                <li><a href="/user_db">User</a></li>
             </ul>
         </div>
     </div>
 </div>
 {% endblock %}
 
-
-
 {% block content %}
 <div class="container">
     <div>
         {{ wtf.quick_form(form) }} </br>
-    </div>
+    </div>  
 
     <div>
-        {{ wtf.quick_form(form_2) }} </br>
-    </div>    
-
-    <div>
-        {% if occurrence %}
-            <div class="page-header">
-                <h2>Paris a été trouvé {{ occurrence }} fois.</h2>
+        {% if username %}
+            <div>
+                <h3>Bonjour : {{ username }}</h3>
             </div>
-        {% endif %}
-    </div>
-    
-    <div class="page-header">
-        {% if text %}
-            <h4>Voici votre texte: </h4>
-            {{text}}
         {% endif %}
     </div>
  
 </div>
 {% endblock %}
-
