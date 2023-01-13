@@ -1,0 +1,20 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flask = "~=2.2.2"
+flask-wtf = "~=1.0.1"
+email-validator = "*"
+unicode = "*"
+unidecode = "*"
+flask-bootstrap = "~=3.3.7.0"
+dash = "*"
+pandas = "*"
+dash-bootstrap-components = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"
