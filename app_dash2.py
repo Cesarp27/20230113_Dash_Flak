@@ -130,8 +130,14 @@ def user_get(username):
     return str(user)
 
 
+# @app.route("/users", methods=['GET'])
+# def user_search():
+#     query = request.args["query"]
+#     users = db.session.query(User).filter(User.email.like(f'%{query}%')).all()
+#     return users
+
 @app.route("/users", methods=['GET'])
-def user_search():
-    query = request.args["query"]
-    users = db.session.query(User).filter(User.email.like(f'%{query}%'))
-    return users
+def users():
+    users = db.session.query(User).all()
+    print(users)
+    return render_template("all_users_db.html", users=users)

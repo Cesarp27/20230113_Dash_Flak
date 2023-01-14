@@ -28,25 +28,18 @@
 {% endblock %}
 
 {% block content %}
-<div class="container">
-    <div>
-        {{ wtf.quick_form(form) }} </br>
-    </div>  
+    <div class="container">
+        <div>
 
-    <div>
-        {% if username %}
-            <div>
-                <h3>Bonjour : {{ username }}</h3>
-            </div>
-        {% endif %}
+            {% for user in users %}
+                <div>
+                    <div>
+                        <h5>Utilisateur: {{ user.username }} - Email: {{ user.email }}</h5>
+                    </div>
+                </div>
+
+            {% endfor %}
+
+        </div>
     </div>
- 
-</div>
 {% endblock %}
-
-
-{% for field, errors in form.errors.items() %}
-<div class="alert alert-error">
-    {{ form[field].label }}: {{ ', '.join(errors) }}
-</div>
-{% endfor %}
